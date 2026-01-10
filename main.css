@@ -1,79 +1,206 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.container{
+
+:root {
+    --maincolor: #FB2E86;
+}
+
+.container {
     max-width: 1300px;
     margin: auto;
 }
-a{
+
+a {
     text-decoration: none;
 }
-ul{
+
+ul {
     list-style-type: none;
 }
-.row{
+
+.row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-:root{
-    --maincolor:#FB2E86;
+
+
+body {
+    margin: 0;
+    padding-top: 120px;
+   
 }
-body{
-    height: 9000px;
-}
-.header{
+
+
+.header {
     padding: 37px 0;
-position: fixed;
-width: 100%;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 999;
 }
 
-.header nav ul{
-display: flex;
-gap: 36px;
-   font-family: "Lato", sans-serif;
-   
-   
+.header nav ul {
+    display: flex;
+    gap: 36px;
+    font-family: "Lato", sans-serif;
 }
-.header nav ul a{
+
+.header nav ul a {
     color: #0D0E43;
-}
-.header nav ul a{
     transition: color 1s;
 }
-.header nav ul:hover .nav-home{
+
+.header nav ul:hover .nav-home {
     color: black;
 }
-.header nav ul a:hover{
-    color: var(--maincolor);
-}
-.header nav ul .nav-home{
-    color: var(--maincolor);
-}
-.header nav ul i{
-font-size: smaller;
 
-color: var(--maincolor);
+.header nav ul a:hover {
+    color: var(--maincolor);
 }
-.header .search form{
+
+.header nav ul .nav-home {
+    color: var(--maincolor);
+}
+
+.header nav ul i {
+    font-size: smaller;
+    color: var(--maincolor);
+}
+
+.header .search form {
     display: flex;
-    
-
+    border: 2px solid #E7E6EF;
 }
-.header .search form input{
+
+.header .search form input {
     border: 0;
     padding: 0 30px;
 }
-.header .search form button{
+
+.header .search form button {
     border: 0;
     padding: 9px 5px;
     background-color: var(--maincolor);
-    
 }
-.header .search form{
-    border: 2px solid #E7E6EF;
-    
+
+.footer {
+    background-color: rgba(238, 239, 251, 1);
+    margin-top: 20px;
+    padding: 50px 0px;
+}
+
+.footer .row {
+    align-items: flex-start;
+}
+
+.footer-left-side {
+    padding: 30px 15px;
+    width: 41%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-start;
+}
+
+.email form {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgba(231, 230, 239, 1);
+}
+
+.email input {
+    border: 0;
+    padding: 15px 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex-grow: 1;
+}
+
+.email button {
+    border: 0;
+    padding: 15px;
+    background-color: var(--maincolor);
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.footer-left-side .contact {
+    color: #a6a6c5;
+    font-style: normal;
+}
+
+.footer-right-side {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-right-side a {
+    color: rgba(138, 143, 185, 1);
+}
+
+.footer-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 25px;
+    width: 25%;
+    min-width: 180px;
+    padding-top: 25px;
+}
+
+.footer-item nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media screen and (max-width:1020px) {
+    .footer-left-side {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-right-side {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:463px) {
+    .email input {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .email button {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media screen and (max-width:325px) {
+    .email form input {
+        width: 70%;
+    }
 }
